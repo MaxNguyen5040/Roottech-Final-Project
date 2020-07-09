@@ -2,7 +2,6 @@
 <head> 
 <title> Homepage </title>
 <link rel="stylesheet" type="text/css" href = "Roottech Final Project.css">
-<script src="p5.js"> </script>
 </head>
 
 <body>
@@ -29,89 +28,5 @@
 </ul>
 
 
-
-<script id="script" type="text/javascript">
-var x;
-var y;
-var z;
-var line1x;
-var line2x;
-var line3x;
-var line4x;
-var cloud1x;
-var cloud2x;
-var cloud3x;
-var cloud4x;
-
-
-Function setup(){
-	x = 0;
-	y = 0;	
-	z = 0;
-	line1x= 20;
-	line2x= 70;
-	line3x= 340;
-	line4x = 390;
-	cloud1x = 90;
-	cloud2x = 107;
-	cloud3x = 128;
-	cloud4x = 158;
-	fill(255, 153, 0);
-	rect(0, 0, 400, 400);
-	createCanvas(400, 400);}
-
-draw= function() {
-    background(237, 233, 204);
-    noStroke();
-	rect(0,0,400,400);
-    
-    //sky
-    fill(46, 196, 199);
-    rect(0,0,400,151);
-    fill(238, 255, 0);
-    ellipse(401,0,100,100);
-    
-    //clouds
-    fill(255, 255, 255);
-    ellipse(cloud1x-y,86,50,50);
-    ellipse(cloud2x-y,73,50,50);
-    ellipse(cloud3x-y,86,50,50);
-    ellipse(cloud4x-y,73,50,50);
-    
-    
-    //road
-    fill(0, 0, 0);
-    rect(0,250,400,100);
-    
-    //yellow bits
-    strokeWeight(5);
-    stroke(157, 163, 75);
-    line(line1x-x,300,line2x -x,300);
-    line(line3x-z,300,line4x -z,300);
-
-    
-    //car
-    fill(27, 118, 145);
-    noStroke();
-    rect(72,286,72,41);
-    fill(0, 0, 0);
-    stroke(87, 81, 81);
-    ellipse(131,326,25,25);
-    ellipse(85,326,25,25);
-    
-    x+= 1;
-    y+= 1;
-    z+= 1;
-    if(line2x - x === -10){
-            x= -400;}
-            
-    if(cloud4x - y === -20){
-            y= -400;}
-    
-    if(line4x-z === -10){
-            z = -400;}
-
-};
-</script>
 </body>
 </html>
